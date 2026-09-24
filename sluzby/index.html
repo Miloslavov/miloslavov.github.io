@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lokálne služby – Miloslavov</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+
+</head>
+<body>
+<!-- NAV -->
+<script src="../assets/nav.js"></script>
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb">
+    <a href="../">🏠 Domov</a>
+    <span class="sep">/</span>
+    <span class="current">Lokálne služby</span>
+  </div>
+</div>
+<!-- HERO -->
+<header class="hero compact">
+  <div class="hero-content">
+    <div class="hero-label">Komunita</div>
+    <h1><span>Lokálne</span> služby</h1>
+    <p>Šikovní susedia a živnostníci z Miloslavova, ktorých nenájdete na Google Maps.</p>
+  </div>
+</header>
+<div class="colored-divider"></div>
+<!-- FILTER LIŠTA -->
+<div class="filter-wrapper" id="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Kategória:</span>
+    <button class="cat-btn active" data-cat="all">Všetky <span class="cat-count" id="count-all">5</span></button>
+    <button class="cat-btn" data-cat="predaj">🥚 Domáce produkty <span class="cat-count" id="count-predaj">0</span></button>
+    <button class="cat-btn" data-cat="krajcirstvo">✂️ Krajčírstvo <span class="cat-count" id="count-krajcirstvo">0</span></button>
+    <button class="cat-btn" data-cat="zahradnictvo">🌳 Záhradníctvo <span class="cat-count" id="count-zahradnictvo">0</span></button>
+    <button class="cat-btn" data-cat="upratovanie">🧹 Upratovanie <span class="cat-count" id="count-upratovanie">0</span></button>
+    <button class="cat-btn" data-cat="opravy">🔧 Opravy <span class="cat-count" id="count-opravy">2</span></button>
+    <button class="cat-btn" data-cat="kadernictvo">💈 Kaderníctvo &amp; Barbershopy <span class="cat-count" id="count-kadernictvo">3</span></button>
+    <button class="cat-btn" data-cat="krasa">💅 Salóny krásy <span class="cat-count" id="count-krasa">0</span></button>
+    <button class="cat-btn" data-cat="doucovanie">📚 Doučovanie <span class="cat-count" id="count-doucovanie">0</span></button>
+    <button class="cat-btn" data-cat="opatrovanie">👶 Opatrovanie <span class="cat-count" id="count-opatrovanie">0</span></button>
+  </div>
+</div>
+<!-- OBSAH -->
+<main class="page-wrapper tight">
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <span class="disclaimer-icon">💡</span>
+    <span>Poznáte niekoho šikovného? <strong>Napíšte nám na <u><a href="mailto:miloslavov@tuta.io">miloslavov@tuta.io</a></u></strong> – pridáme ho zadarmo. Nie sme reklamný portál, iba susedský zoznam.</span>
+  </div>
+  <!-- EMPTY STATE -->
+  <div class="empty-state" id="empty-state">
+    <div class="big">🔍</div>
+    <p>V tejto kategórii zatiaľ nie sú žiadne služby.<br>Viete o niekon? Napíšte nám!</p>
+  </div>
+  <!-- ══ PREDAJ DOMÁCICH PRODUKTOV ══ -->
+  <div class="cat-section" id="sec-predaj" data-cat="predaj">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">🥚</div>
+      <h2>Predaj domácich produktov</h2>
+      <span class="cat-tag">Čoskoro</span>
+    </div>
+    <div class="services-grid">
+      <a href="mailto:miloslavov@tuta.io" class="add-service-card">
+        <div style="font-size:1.5rem">🥚</div>
+        <strong>Predávate domáce produkty?</strong>
+        <span>Napíšte nám – pridáme vás zadarmo</span>
+      </a>
+    </div>
+  </div>
+  <!-- ══ KRAJČÍRSTVO ══ -->
+  <div class="cat-section" id="sec-krajcirstvo" data-cat="krajcirstvo">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">✂️</div>
+      <h2>Krajčírstvo &amp; opravy odevov</h2>
+      <span class="cat-tag">Čoskoro</span>
+    </div>
+  </div>
+  <!-- ══ ZÁHRADNÍCTVO ══ -->
+  <div class="cat-section" id="sec-zahradnictvo" data-cat="zahradnictvo">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">🌳</div>
+      <h2>Záhradníctvo &amp; terenné úpravy</h2>
+      <span class="cat-tag">Čoskoro</span>
+    </div>
+  </div>
+  <!-- ══ UPRATOVANIE ══ -->
+  <div class="cat-section" id="sec-upratovanie" data-cat="upratovanie">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">🧹</div>
+      <h2>Upratovanie &amp; domácnosť</h2>
+      <span class="cat-tag">Čoskoro</span>
+    </div>
+  </div>
+  <!-- ══ OPRAVY ══ -->
+  <div class="cat-section" id="sec-opravy" data-cat="opravy">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">🔧</div>
+      <h2>Opravy &amp; rekonštrukcie</h2>
+      <span class="cat-tag">2 poskytovatelia</span>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-cat="opravy">
+        <div class="service-cat-label">🚲 Bicykle</div>
+        <h3>AJ bikes</h3>
+        <p class="desc">Profesionálny servis bicyklov, poradenstvo a predaj všetkých komponentov.</p>
+        <div class="contact-list">
+          <div class="contact-item"><div class="icon">📞</div> <a href="tel:+421950590277">0950 590 277</a></div>
+          <div class="contact-item"><div class="icon">💬</div> <a href="https://wa.me/421950590277" target="_blank" rel="noopener">WhatsApp</a></div>
+          <div class="contact-item"><div class="icon">📍</div> Tekovská 719/1</div>
+          <div class="contact-item"><div class="icon">🌐</div> <a href="https://ajbikes.sk/" target="_blank" rel="noopener">ajbikes.sk</a></div>
+          <div class="contact-item"><div class="icon">📘</div> <a href="https://www.facebook.com/AJbikes.sk" target="_blank" rel="noopener">Facebook</a></div>
+          <div class="contact-item"><div class="icon">📧</div> <a href="mailto:ajbikes.sk@gmail.com">ajbikes.sk@gmail.com</a></div>
+        </div>
+        <div class="map-links">
+          <a href="https://mapy.com/s/godosapude" class="map-btn mapy-com" title="Zobraziť na Mapy.com">
+            <img src="https://mapy.com/favicon.ico" alt="" class="map-btn-icon">Mapy.com
+          </a>
+          <a href="https://maps.app.goo.gl/Rgx4Jhs3i1Kd5fBv6" class="map-btn google-maps" title="Zobraziť na Google Mapách">
+            <img src="https://maps.google.com/favicon.ico" alt="" class="map-btn-icon">Google Mapy
+          </a>
+        </div>
+      </div>
+      <div class="service-card" data-cat="opravy">
+        <div class="service-cat-label">💡 Elektrika</div>
+        <h3>Peter Kováč – elektroinštalácie</h3>
+        <p class="desc">Elektroinštalácia, výmena zásuviek, montáž svietidiel, prerábky</p>
+        <div class="contact-list">
+          <div class="contact-item"><div class="icon">📞</div> <a href="tel:+421908430749">0908 430 749</a></div>
+          <div class="contact-item"><div class="icon">💬</div> <a href="https://m.me/peterkovac.elektroinstalacie" target="_blank" rel="noopener">Messenger</a></div>
+          <div class="contact-item"><div class="icon">📘</div> <a href="https://www.facebook.com/peterkovac.elektroinstalacie/" target="_blank" rel="noopener">Facebook</a></div>
+          <div class="contact-item"><div class="icon">📧</div> <a href="mailto:peter.kovac1695@gmail.com">peter.kovac1695@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ══ DOUČOVANIE ══ -->
+  <div class="cat-section" id="sec-doucovanie" data-cat="doucovanie">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">📚</div>
+      <h2>Doučovanie &amp; vzdelanie</h2>
+      <span class="cat-tag">Čoskoro</span>
+    </div>
+  </div>
+  <!-- ══ OPATROVANIE ══ -->
+  <div class="cat-section" id="sec-opatrovanie" data-cat="opatrovanie">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">👶</div>
+      <h2>Opatrovanie &amp; starám sa</h2>
+      <span class="cat-tag">Čoskoro</span>
+    </div>
+  </div>
+  <!-- ══ KADERNÍCTVO & BARBERSHOPY ══ -->
+  <div class="cat-section" id="sec-kadernictvo" data-cat="kadernictvo">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">💈</div>
+      <h2>Kaderníctvo &amp; Barbershopy</h2>
+      <span class="cat-tag">3 poskytovatelia</span>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-cat="kadernictvo">
+        <div class="service-cat-label">💈 Barbershop</div>
+        <h3>Moravek Barbershop</h3>
+        <p class="desc">Pánske strihy a starostlivosť o bradu.</p>
+        <div class="contact-list">
+          <div class="contact-item"><div class="icon">📞</div> <a href="tel:+421951015399">0951 015 399</a></div>
+          <div class="contact-item"><div class="icon">📍</div> Obchodná 1</div>
+          <div class="contact-item"><div class="icon">🌐</div> <a href="https://www.moravekbarbershop.sk/" target="_blank" rel="noopener">moravekbarbershop.sk</a></div>
+          <div class="contact-item"><div class="icon">📘</div> <a href="https://www.facebook.com/Moravek-Barbershop-101773661645449" target="_blank" rel="noopener">Facebook</a></div>
+          <div class="contact-item"><div class="icon">📧</div> <a href="mailto:moravekbarbershop@gmail.com">moravekbarbershop@gmail.com</a></div>
+          <div class="contact-item"><div class="icon">🗓️</div> <a href="https://www.moravekbarbershop.sk/objednavka/" target="_blank" rel="noopener">Rezervuj si termín</a></div>
+        </div>
+        <div class="map-links">
+          <a href="https://mapy.com/s/kopebohaze" class="map-btn mapy-com" title="Zobraziť na Mapy.com">
+            <img src="https://mapy.com/favicon.ico" alt="" class="map-btn-icon">Mapy.com
+          </a>
+          <a href="https://maps.app.goo.gl/XYW5EdXYoxBcc82V9" class="map-btn google-maps" title="Zobraziť na Google Mapách">
+            <img src="https://maps.google.com/favicon.ico" alt="" class="map-btn-icon">Google Mapy
+          </a>
+        </div>
+      </div>
+      <div class="service-card" data-cat="kadernictvo">
+        <div class="service-cat-label">💈 Barbershop</div>
+        <h3>MZ Barbershop</h3>
+        <p class="desc">Zaoberáme sa hlavne 💇🏻‍♂️pánskym strihom, bradami🧔🏻‍♂️a 🪒holením.</p>
+        <div class="contact-list">
+          <div class="contact-item"><div class="icon">📞</div> <a href="tel:+421911104400">0911 104 400</a></div>
+          <div class="contact-item"><div class="icon">📍</div> Kvetná 153/18</div>
+          <div class="contact-item"><div class="icon">🌐</div> <a href="https://mzbarbershop.sk/" target="_blank" rel="noopener">mzbarbershop.sk</a></div>
+          <div class="contact-item"><div class="icon">📘</div> <a href="https://www.facebook.com/barbrysss" target="_blank" rel="noopener">Facebook</a></div>
+          <div class="contact-item"><div class="icon">📧</div> <a href="mailto:info@mzbarbershop.sk">info@mzbarbershop.sk</a></div>
+          <div class="contact-item"><div class="icon">🗓️</div> <a href="https://rezervacie.mzbarbershop.sk/" target="_blank" rel="noopener">Rezervuj si termín</a></div>
+        </div>
+        <div class="map-links">
+          <a href="https://mapy.com/s/lahofenode" class="map-btn mapy-com" title="Zobraziť na Mapy.com">
+            <img src="https://mapy.com/favicon.ico" alt="" class="map-btn-icon">Mapy.com
+          </a>
+          <a href="https://maps.app.goo.gl/Vvn9GjMnZn2jU6gLA" class="map-btn google-maps" title="Zobraziť na Google Mapách">
+            <img src="https://maps.google.com/favicon.ico" alt="" class="map-btn-icon">Google Mapy
+          </a>
+        </div>
+      </div>
+      <div class="service-card" data-cat="kadernictvo">
+        <div class="service-cat-label">✂️ Kaderníctvo</div>
+        <h3>Velvet Hair</h3>
+        <p class="desc">Profesionálne kaderníctvo v Miloslavove. Špecializujeme sa na zdravé vlasy, moderné farbenie, balayage a strihy na mieru</p>
+        <div class="contact-list">
+          <div class="contact-item"><div class="icon">📞</div> <a href="tel:+421911046963">0911 046 963</a></div>
+          <div class="contact-item"><div class="icon">📍</div> Obchodná 1</div>
+          <div class="contact-item"><div class="icon">📘</div> <a href="https://www.facebook.com/profile.php?id=61587004036665" target="_blank" rel="noopener">Facebook</a></div>
+          <div class="contact-item"><div class="icon">📸</div> <a href="https://www.instagram.com/velvethair.miloslavov/" target="_blank" rel="noopener">Instagram</a></div>
+          <div class="contact-item"><div class="icon">🗓️</div> <a href="https://services.bookio.com/velvet-hair/widget?lang=sk" target="_blank" rel="noopener">Rezervuj si termín</a></div>
+        </div>
+        <div class="map-links">
+          <a href="https://mapy.com/s/pofugucedo" class="map-btn mapy-com" title="Zobraziť na Mapy.com">
+            <img src="https://mapy.com/favicon.ico" alt="" class="map-btn-icon">Mapy.com
+          </a>
+          <a href="https://maps.app.goo.gl/mYQzWxMB9fSC2qkNA" class="map-btn google-maps" title="Zobraziť na Google Mapách">
+            <img src="https://maps.google.com/favicon.ico" alt="" class="map-btn-icon">Google Mapy
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ══ SALÓNY KRÁSY ══ -->
+  <div class="cat-section" id="sec-krasa" data-cat="krasa">
+    <div class="cat-section-header">
+      <div class="cat-section-icon">💅</div>
+      <h2>Salóny krásy &amp; nechtové štúdiá</h2>
+      <span class="cat-tag">Čoskoro</span>
+    </div>
+    <div class="services-grid">
+      <a href="mailto:miloslavov@tuta.io" class="add-service-card">
+        <div style="font-size:1.5rem">💅</div>
+        <strong>Poznáte salón krásy v Miloslavove?</strong>
+        <span>Napíšte nám – pridáme ho zadarmo</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="https://www.miloslavov.sk" target="_blank" rel="noopener">Oficiálna stránka obce</a>
+    <a href="../sluzby/">Služby</a>
+    <a href="../ako-vybavim/" class="disabled">Ako vybavím</a>
+    <a href="../volny-cas/" class="disabled">Voľný čas</a>
+    <a href="../doprava/" class="disabled">Doprava</a>
+    <a href="../odpad/" class="disabled">Odpad</a>
+    <a href="../skoly/" class="disabled">Školy</a>
+  </div>
+  <p><strong>Miloslavov – Komunitný sprievodca</strong> · Neoficiálny portál pre obyvateľov</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;opacity:0.6;">Obsah je poskytovaný len pre informčné účely. Kontaktné údaje sú ilustračné.</p>
+</footer>
+<script>
+  const buttons = document.querySelectorAll('.cat-btn');
+  const sections = document.querySelectorAll('.cat-section');
+  const emptyState = document.getElementById('empty-state');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.cat;
+      // Tlačidlá – zvýraznenie
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Sekcie – zobrazenie / skrytie
+      let anyVisible = false;
+      sections.forEach(sec => {
+        if (cat === 'all' || sec.dataset.cat === cat) {
+          sec.classList.remove('hidden');
+          anyVisible = true;
+        } else {
+          sec.classList.add('hidden');
+        }
+      });
+      emptyState.style.display = anyVisible ? 'none' : 'block';
+      // Scroll na prvú viditelnú sekciu (pri filtrovaní)
+      if (cat !== 'all') {
+        const target = document.getElementById('sec-' + cat);
+        if (target) {
+          setTimeout(() => {
+            const offset = target.getBoundingClientRect().top + window.scrollY - 130;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }, 50);
+        }
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
