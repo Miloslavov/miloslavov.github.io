@@ -13,7 +13,7 @@
     { slug: 'ako-vybavim',  emoji: '📋', label: 'Ako vybavím',      enabled: false },
     { slug: 'volny-cas',    emoji: '🚴', label: 'Voľný čas',        enabled: false },
     { slug: 'doprava',      emoji: '🚌', label: 'Doprava',          enabled: false },
-    { slug: 'odpad',        emoji: '🗑️', label: 'Odpad',            enabled: false },
+    { slug: 'odpad',        emoji: '🗑️', label: 'Odpad',            enabled: true  },
     { slug: 'skoly',        emoji: '🏫', label: 'Školy',            enabled: false },
   ];
 
@@ -47,4 +47,3 @@
     document.body.insertBefore(wrapper, document.body.firstChild);
   }
 }());
-

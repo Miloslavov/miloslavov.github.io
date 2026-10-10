@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odpad – platba a QR kód | Miloslavov</title>
+  <meta name="description" content="Modelová podstránka pre platbu komunálneho odpadu v Miloslavove vrátane QR kódu pre bankový prevod." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+<script src="../assets/nav.js"></script>
+<div class="breadcrumb-bar">
+  <div class="breadcrumb">
+    <a href="../">🏠 Domov</a>
+    <span class="sep">/</span>
+    <span class="current">Odpad</span>
+  </div>
+</div>
+
+<header class="hero compact">
+  <div class="hero-content">
+    <div class="hero-label">Modelová stránka</div>
+    <h1><span>Platba za odpad</span> s QR kódom</h1>
+    <p>Vyplňte údaje, zvoľte veľkosť nádoby a vygenerujte si QR kód pre bankový prevod podľa sadzieb zverejnených obcou Miloslavov.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">28.02.2026</span><span class="lbl">splatnosť poplatku</span></div>
+      <div class="hero-stat"><span class="num">VS 6767</span><span class="lbl">variabilný symbol</span></div>
+      <div class="hero-stat"><span class="num">3 nádoby</span><span class="lbl">110 / 120 / 240 l</span></div>
+    </div>
+  </div>
+</header>
+<div class="colored-divider"></div>
+
+<main class="page-wrapper tight">
+  <div class="disclaimer">
+    <div class="disclaimer-icon">ℹ️</div>
+    <div>
+      Toto je modelová ukážka bez backendu, databázy a odosielania e-mailov, no QR kód sa generuje v reálnom slovenskom formáte <strong>PAY by square</strong>, takže by ho bankové aplikácie mali vedieť správne načítať. Pripomienka na ďalší rok sa po zaškrtnutí uloží iba lokálne vo vašom prehliadači.
+    </div>
+  </div>
+
+  <section class="waste-grid">
+    <div class="waste-stack">
+      <article class="waste-panel">
+        <div class="section-header">
+          <div class="section-icon green">📝</div>
+          <div class="section-title-group">
+            <h2>Zaplatiť za odpad</h2>
+            <p>Po výbere frekvencie a nádoby sa suma doplní automaticky podľa sadzobníka.</p>
+          </div>
+        </div>
+
+        <form id="waste-payment-form" class="waste-form">
+          <div class="waste-field-grid">
+            <div class="waste-field">
+              <label for="first-name">Meno</label>
+              <input id="first-name" name="first-name" type="text" autocomplete="given-name" required />
+            </div>
+            <div class="waste-field">
+              <label for="last-name">Priezvisko</label>
+              <input id="last-name" name="last-name" type="text" autocomplete="family-name" required />
+            </div>
+            <div class="waste-field full-width">
+              <label for="address">Adresa</label>
+              <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Napr. Malinová 1752/10, Miloslavov" required />
+            </div>
+          </div>
+
+          <fieldset class="waste-fieldset">
+            <legend>Frekvencia vývozu</legend>
+            <div class="waste-cycle-grid">
+              <label class="waste-cycle-option">
+                <input type="radio" name="collection-cycle" value="26" checked />
+                <span class="waste-cycle-card">
+                  <strong>26 vývozov ročne</strong>
+                  <span>Štandardná sadzba podľa zverejneného cenníka obce.</span>
+                </span>
+              </label>
+              <label class="waste-cycle-option">
+                <input type="radio" name="collection-cycle" value="13" />
+                <span class="waste-cycle-card">
+                  <strong>13 vývozov ročne</strong>
+                  <span>Modelovo pre mesačný vývoz / znížený cyklus.</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="waste-fieldset">
+            <legend>Veľkosť nádoby</legend>
+            <div class="waste-bin-grid">
+              <label class="waste-bin-option">
+                <input type="radio" name="bin-size" value="110" />
+                <span class="waste-bin-card">
+                  <img src="https://www.revital-lc.sk/fotky57787/fotos/106781.jpg" alt="Ilustračná nádoba na odpad 110 litrov" />
+                  <span class="waste-bin-body">
+                    <strong>110 l nádoba</strong>
+                    <span class="waste-bin-meta">Rodinný dom / menšia domácnosť</span>
+                    <span class="waste-bin-price" data-role="bin-price" data-size="110">143,00 EUR</span>
+                  </span>
+                </span>
+              </label>
+              <label class="waste-bin-option">
+                <input type="radio" name="bin-size" value="120" checked />
+                <span class="waste-bin-card">
+                  <img src="https://www.shop.elkoplast.sk/images/shop/Elkoplast/max/Plastova_nadoba_na_odpad_polenice_120_l_cierna_zmes.jpg" alt="Ilustračná nádoba na odpad 120 litrov" />
+                  <span class="waste-bin-body">
+                    <strong>120 l nádoba</strong>
+                    <span class="waste-bin-meta">Najčastejšie používaná veľkosť</span>
+                    <span class="waste-bin-price" data-role="bin-price" data-size="120">149,75 EUR</span>
+                  </span>
+                </span>
+              </label>
+              <label class="waste-bin-option">
+                <input type="radio" name="bin-size" value="240" />
+                <span class="waste-bin-card">
+                  <img src="https://www.shop.elkoplast.sk/images/shop/Elkoplast/mid/Plastova_nadoba_na_odpad_polenice_240_l_cierna_zmes.jpg" alt="Ilustračná nádoba na odpad 240 litrov" />
+                  <span class="waste-bin-body">
+                    <strong>240 l nádoba</strong>
+                    <span class="waste-bin-meta">Väčšia nádoba pre väčšiu domácnosť</span>
+                    <span class="waste-bin-price" data-role="bin-price" data-size="240">249,60 EUR</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="waste-checkbox">
+            <input type="checkbox" id="reminder" name="reminder"/>
+            <span>Chcem budúci rok dostať email s pripomienkou s rovnakým QR kódom</span>
+          </label>
+
+          <div class="waste-actions">
+            <button class="waste-btn" type="submit">Vygenerovať QR kód</button>
+            <small>QR obsahuje IBAN, VS 6767, KS 0308 a do poznámky meno, priezvisko a adresu osoby, za ktorú sa poplatok platí.</small>
+          </div>
+        </form>
+      </article>
+    </div>
+
+    <aside id="waste-summary" class="waste-panel waste-summary" aria-live="polite">
+      <h3>QR kód pre úhradu</h3>
+      <div class="waste-summary-box">
+        <div class="waste-summary-card">
+          <h4>Súhrn platby</h4>
+          <div class="waste-summary-list">
+            <div class="waste-summary-row"><span>Suma</span><strong id="summary-amount">—</strong></div>
+            <div class="waste-summary-row"><span>Platiteľ</span><strong id="summary-payer">—</strong></div>
+            <div class="waste-summary-row"><span>Adresa</span><strong id="summary-address">—</strong></div>
+            <div class="waste-summary-row"><span>Nádoba</span><strong id="summary-bin">—</strong></div>
+            <div class="waste-summary-row"><span>Frekvencia</span><strong id="summary-cycle">—</strong></div>
+            <div class="waste-summary-row"><span>Poznámka</span><strong id="summary-note">—</strong></div>
+          </div>
+        </div>
+
+        <div class="waste-summary-card waste-qr-wrap">
+          <div id="waste-qr-code" class="waste-qr-code" aria-label="QR kód platby"></div>
+          <div class="waste-qr-caption">Príjemca: <strong>Obec Miloslavov</strong> · účet vo VÚB · variabilný symbol 6767</div>
+          <div id="summary-reminder" class="waste-reminder-note"></div>
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.miloslavov.sk" target="_blank" rel="noopener">Oficiálna stránka obce</a>
+    <a href="../sluzby/">Služby</a>
+    <a href="../odpad/">Odpad</a>
+    <a href="../projekty/">Projekty,</a>
+    <a href="../ako-vybavim/" class="disabled">Ako vybavím</a>
+    <a href="../volny-cas/" class="disabled">Voľný čas</a>
+  </div>
+  <p><strong>Miloslavov – Komunitný sprievodca</strong> · Neoficiálny portál pre obyvateľov</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;opacity:0.6;">Obsah je poskytovaný len pre informačné účely. Suma a údaje sú zadané ilustračne, formát QR kódu (PAY by square) zodpovedá reálnemu slovenskému bankovému štandardu.</p>
+</footer>
+
+<script type="module" src="../assets/odpad.js"></script>
+</body>
+</html>
