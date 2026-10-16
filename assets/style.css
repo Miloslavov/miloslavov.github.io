@@ -708,6 +708,25 @@ footer a.disabled {
 .map-link-btn.mapy { background: #E3001B; color: var(--white); }
 .map-link-btn.google { background: var(--white); color: var(--gray-800); border: 1.5px solid var(--gray-200); }
 
+/* ── MAP BUTTONS (karty služieb) ── */
+.map-links { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-top: 0.9rem; }
+.map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  transition: opacity 0.18s;
+  white-space: nowrap;
+}
+.map-btn:hover { opacity: 0.85; }
+.map-btn-icon { width: 16px; height: 16px; flex-shrink: 0; object-fit: contain; }
+.map-btn.mapy-com,
+.map-btn.google-maps { background: var(--white); color: var(--gray-800); border: 1.5px solid var(--gray-200); }
+.map-btn:hover { border-color: var(--gray-400, var(--gray-200)); }
+
 /* ===================== GUIDE KARTY (ako-vybavim) ===================== */
 .guide-list { display: flex; flex-direction: column; gap: 1rem; }
 .guide-card {
