@@ -1274,3 +1274,12 @@ footer a.disabled {
     grid-template-columns: 1fr;
   }
 }
+
+.contact-item a.booking-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-item a.booking-link::before {
+  content: "→ ";
+}
